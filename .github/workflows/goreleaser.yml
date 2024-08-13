@@ -35,11 +35,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       -
-        name: Get all dependencies with "go mod vendor"
-        run: |
-          go mod vendor
-
-      -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
         with:
