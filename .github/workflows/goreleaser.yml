@@ -10,8 +10,7 @@ permissions:
 
 jobs:
   goreleaser:
-    runs-on:
-      group: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
     
