@@ -33,6 +33,9 @@ changelog:
 dockers:
 - id: wfi-amd64
   image_templates:
+  - "dxdx/wfi:{{ .Tag }}"
+  - "dxdx/wfi:{{ .Major }}"
+  - "dxdx/wfi:latest"
   - "ghcr.io/dx-oss/wfi:{{ .Tag }}"
   - "ghcr.io/dx-oss/wfi:{{ .Major }}"
   - "ghcr.io/dx-oss/wfi:latest"
@@ -46,6 +49,9 @@ dockers:
   - "--platform=linux/amd64"
 - id: wfi-arm64
   image_templates:
+  - "dxdx/wfi:{{ .Tag }}"
+  - "dxdx/wfi:{{ .Major }}"
+  - "dxdx/wfi:latest"
   - "ghcr.io/dx-oss/wfi:{{ .Tag }}"
   - "ghcr.io/dx-oss/wfi:{{ .Major }}"
   - "ghcr.io/dx-oss/wfi:latest"
