@@ -20,7 +20,7 @@ jobs:
         with:
           submodules: true # Fetch submodules
           fetch-depth: 0   # Fetch all history for all branches and tags
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DOCKER_GITHUB_TOKEN }}
 
       -
         name: Set up Go
@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: dx-oss
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.DOCKER_GITHUB_TOKEN }}
 
       -
         name: Run GoReleaser
@@ -42,4 +42,4 @@ jobs:
           version: latest
           args: release --clean --parallelism 2 --timeout 25m0s
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DOCKER_GITHUB_TOKEN }}
